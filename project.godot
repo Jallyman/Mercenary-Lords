@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Mercenary Lords"
+run/main_scene="res://scenes/startMenu.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[layer_names]
+
+2d_physics/layer_1="Main Layer"
+2d_physics/Layer1=false
+
+[rendering]
+
+quality/2d/use_pixel_snap=true
+quality/depth/hdr=false
+environment/default_environment="res://default_env.tres"

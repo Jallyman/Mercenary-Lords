@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dwarf Mining Music - OGG.ogg-44d0871714d31fe4027c63521866ad4d.oggstr"
+
+[deps]
+
+source_file="res://music/Dwarf Mining Music - OGG.ogg"
+dest_files=[ "res://.import/Dwarf Mining Music - OGG.ogg-44d0871714d31fe4027c63521866ad4d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
