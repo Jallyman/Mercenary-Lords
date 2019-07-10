@@ -12,7 +12,6 @@ func _on_Menu_Button_pressed():
 	else:
 		get_node("Menu").show()
 	
-	
 
 func _ready():
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND

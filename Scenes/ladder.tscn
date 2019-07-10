@@ -53,10 +53,6 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[connection signal="mouse_entered" from="LadderButton" to="LadderButton" method="_on_Ladder_button_mouse_entered"]
-
-[connection signal="mouse_exited" from="LadderButton" to="LadderButton" method="_on_Ladder_button_mouse_exited"]
-
 [connection signal="pressed" from="LadderButton" to="LadderButton" method="_on_Ladder_button_pressed"]
 
 

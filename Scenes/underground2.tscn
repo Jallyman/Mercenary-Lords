@@ -3,7 +3,6 @@
 [ext_resource path="res://images/tilesets/grassTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/LadderUp.tscn" type="PackedScene" id=2]
 
-
 [node name="TileMap" type="TileMap"]
 
 mode = 0
