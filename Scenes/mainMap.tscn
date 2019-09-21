@@ -3,10 +3,10 @@
 [ext_resource path="res://images/tilesets/grassTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/MainMap.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Ladder.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Mob.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/ZombieSpawner.gd" type="Script" id=5]
 
-[node name="TileMap" type="TileMap" index="0"]
+[node name="TileMap" type="TileMap"]
 
 mode = 0
 tile_set = ExtResource( 1 )
@@ -33,13 +33,10 @@ _sections_unfolded = [ "Cell", "Collision" ]
 position = Vector2( -208, 80 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="Mob" parent="." index="1" instance=ExtResource( 4 )]
-
-position = Vector2( 64, 64 )
-
-[node name="Spawner" parent="." index="2" instance=ExtResource( 5 )]
+[node name="Spawner" parent="." index="1" instance=ExtResource( 4 )]
 
 position = Vector2( -128, -224 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+script = ExtResource( 5 )
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transform", "Z Index" ]
 
 

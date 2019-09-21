@@ -9,13 +9,14 @@ func _on_Mob_button_pressed():
 	var UI = get_node("/root/Node")
 	var tileMap = get_node("/root/Node/TileMap")
 	var character = get_node("/root/Node/Character")
-	var mob = get_node("/root/Node/TileMap/Mob")
+	var mob = get_parent()
 	var mobPos = mob.get_position()
 	var charPos = character.get_position()
 	var attackButton = get_node("/root/Node/Character/Camera2D/MenuButton/Menu/AttackButton")
 	var attackPos = attackButton.get_position()
 	
 	print(attackButton)
+	attackButton.mob = mob
 	attackButton.show()
 	
 func _ready():

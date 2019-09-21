@@ -3,11 +3,10 @@ extends TextureButton
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-
+var mob = null
 
 func _on_Attack_button_pressed():
 	
-	var mob = get_node("/root/Node/TileMap/Mob")
 	if(mob.visible):
 		mob.hide()
 		mob.queue_free()

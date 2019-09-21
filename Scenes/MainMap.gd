@@ -12,17 +12,16 @@ func _ready():
 
 func _process(delta):
 
-	if(self.has_node("Mob") == false):
+	if(self.has_node("Mob") == true):
 		print_tree()
 		i+= 1
 		print(i)
-		if(i == 200):
-			var Mob = load("res://scenes/Mob.tscn").instance()
-			var tileMap = get_node("/root/Node/TileMap")
-			Mob.set_name("Mob")
-			Mob.set_position(Vector2(64,64))
-			tileMap.add_child(Mob)
-			i = 0
+		var mob = load("res://scenes/Mob.tscn").instance()
+		var tileMap = get_node("/root/Node/TileMap")
+		mob.set_name("Mob")
+		mob.set_position(Vector2(64,64))
+		tileMap.add_child(mob)
+		i = 0
 	
 	
 #	# Called every frame. Delta is time since last frame.
