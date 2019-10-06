@@ -14,6 +14,7 @@ func _ready():
     Input.set_custom_mouse_cursor(point,2)
 
 func _on_Start_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/UI.tscn")
 
 

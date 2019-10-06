@@ -27,7 +27,7 @@ func _physics_process(delta):
 		motion.y = 0
 	
 	if(motion.length() != 0 && space_state.intersect_ray(position, position + motion, [self]).empty()):
-		print(space_state.intersect_ray(position, position + motion, [self]))
+		# print(space_state.intersect_ray(position, position + motion, [self]))
 		# print(position)
 		translate(motion)
 	pass
