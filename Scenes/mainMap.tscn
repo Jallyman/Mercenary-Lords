@@ -17,5 +17,4 @@ script = ExtResource( 2 )
 position = Vector2( -208, 80 )
 
 [node name="Spawner" parent="." instance=ExtResource( 4 )]
-position = Vector2( -128, -224 )
 script = ExtResource( 5 )
