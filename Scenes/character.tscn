@@ -5,44 +5,19 @@
 [ext_resource path="res://scenes/MenuButton.tscn" type="PackedScene" id=3]
 
 [node name="Character" type="Sprite"]
-
 texture = ExtResource( 1 )
 offset = Vector2( 16, 16 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="0"]
-
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 16, 16 )
-anchor_mode = 1
-rotating = false
 current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
 limit_right = 1000000
 limit_bottom = 1000000
 limit_smoothed = true
-drag_margin_h_enabled = false
-drag_margin_v_enabled = false
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Limit" ]
 
-[node name="MenuButton" parent="Camera2D" index="0" instance=ExtResource( 3 )]
-
+[node name="MenuButton" parent="Camera2D" instance=ExtResource( 3 )]
 margin_left = 416.0
 margin_top = -224.0
 margin_right = 448.0
 margin_bottom = -192.0
-
-

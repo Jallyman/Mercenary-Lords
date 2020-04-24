@@ -5,3 +5,5 @@ Scenes - Capital at start
 
 Scripts - Non capital at start
 
+File Names - Capital at start - Camelcase
+

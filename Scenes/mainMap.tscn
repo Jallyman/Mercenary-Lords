@@ -2,7 +2,7 @@
 
 [ext_resource path="res://images/tilesets/grassTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/MainMap.gd" type="Script" id=2]
-[ext_resource path="res://scenes/Ladder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Ladder.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/ZombieSpawner.gd" type="Script" id=5]
 
@@ -14,7 +14,8 @@ tile_data = PoolIntArray( -8323264, 12, 0, -8323263, 12, 0, -8323262, 12, 0, -83
 script = ExtResource( 2 )
 
 [node name="Ladder" parent="." instance=ExtResource( 3 )]
-position = Vector2( -208, 80 )
+position = Vector2( -288, 64 )
 
 [node name="Spawner" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, 64 )
 script = ExtResource( 5 )

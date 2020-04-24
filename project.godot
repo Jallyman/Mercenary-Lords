@@ -17,7 +17,10 @@ _global_script_class_icons={
 
 config/name="Mercenary Lords"
 run/main_scene="res://scenes/startMenu.tscn"
-config/icon="res://icon.png"
+
+[autoload]
+
+PlayerData="*res://Scenes/PlayerData.gd"
 
 [display]
 

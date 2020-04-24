@@ -4,57 +4,30 @@
 [ext_resource path="res://scenes/LadderButtonUp.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Ladder_Up" type="Sprite"]
-
-position = Vector2( 16, 16 )
+[node name="LadderUp" type="Sprite"]
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+offset = Vector2( 16, 16 )
 
-[node name="Ladder_button_up" type="TextureButton" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
+[node name="LadderButtonUp" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -13.0
+margin_right = 24.0
+margin_bottom = 19.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 16, 16 )
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
-
-position = Vector2( -0.0412321, 0 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, 0.0944691 )
 shape = SubResource( 1 )
-
-[connection signal="pressed" from="Ladder_button_up" to="Ladder_button_up" method="_on_Ladder_button_pressed"]
-
-[connection signal="pressed" from="Ladder_button_up" to="Ladder_button_up" method="_on_Ladder_button_up_pressed"]
-
-
+[connection signal="pressed" from="LadderButtonUp" to="LadderButtonUp" method="_on_Ladder_button_up_pressed"]

@@ -10,7 +10,6 @@ var mobPos2
 func _ready():
 
 	var spawnerShape = get_node("/root/Node/TileMap/Spawner/SpawnerShape")
-	var spawnerPos = spawner.get_position()
 	extents = spawnerShape.shape.get_extents()
 	
 	pass
@@ -26,30 +25,33 @@ func _process(delta):
 	if(i == 200):
 		if(self.has_node("Mob") == false):
 			var mob = load("res://scenes/Mob.tscn").instance()
-			mobPos = Vector2(0 + ((round(rand_range((extents.x*-1)/32,(extents.x)/32))*32)),0 + ((round(rand_range((extents.x*-1)/32,(extents.x)/32))*32)))
-			print(0 + (rand_range(((extents.x*-1)/32),((extents.x)/32)))*32)
+			# mobPos = Vector2(0 + ((floor(rand_range((extents.x*-1)/32,(extents.x)/32))*32)),0 + ((floor(rand_range((extents.x*-1)/32,(extents.x)/32))*32)))
+			var x_coord = round(rand_range(0, extents.x / 32)) * 32
+			var y_coord = round(rand_range(0, extents.y / 32)) * 32
 			
+			mobPos = Vector2(x_coord, y_coord)
+			#print("x co-ords: ", x_coord, "y co-ords: ", y_coord)
 			if(mobPos2 != mobPos):
-				print("made it 1")
+				#print("made it 1")
 				mob.set_name("Mob")
 				mob.set_position(mobPos)
 				spawner.add_child(mob)
 				i = 0
 			i-= 1
 		
-	if(j == 600):
-		if(self.has_node("Mob2") == false):
-			var mob2 = load("res://scenes/Mob.tscn").instance()
-			mobPos2 = Vector2(0 + ((round(rand_range((extents.x*-1)/32,(extents.x)/32))*32)),0 + ((round(rand_range((extents.x*-1)/32,(extents.x)/32))*32)))
-
-			
-			if(mobPos != mobPos2):
-				print("made it 2")
-				mob2.set_name("Mob2")
-				mob2.set_position(mobPos2)
-				spawner.add_child(mob2)
-				j = 0
-			j-= 1
+#	if(j == 600):
+#		if(self.has_node("Mob2") == false):
+#			var mob2 = load("res://scenes/Mob.tscn").instance()
+#			mobPos2 = Vector2(0 + ((round(rand_range((extents.x*-1)/32,(extents.x)/32))*32)),0 + ((round(rand_range((extents.x*-1)/32,(extents.x)/32))*32)))
+#
+#
+#			if(mobPos != mobPos2):
+#				print("made it 2")
+#				mob2.set_name("Mob2")
+#				mob2.set_position(mobPos2)
+#				spawner.add_child(mob2)
+#				j = 0
+#			j-= 1
 			
 	pass
 
