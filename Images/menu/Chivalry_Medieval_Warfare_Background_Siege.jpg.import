@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chivalry_Medieval_Warfare_Background_Siege.jpg-e408931d5e8002869ceaf1d67ecbeed7.stex"
+path="res://.import/Chivalry_Medieval_Warfare_Background_Siege.jpg-78c49c3be575fbd7aa3d338263b06d22.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/menu/Chivalry_Medieval_Warfare_Background_Siege.jpg"
-dest_files=[ "res://.import/Chivalry_Medieval_Warfare_Background_Siege.jpg-e408931d5e8002869ceaf1d67ecbeed7.stex" ]
+source_file="res://Images/Menu/Chivalry_Medieval_Warfare_Background_Siege.jpg"
+dest_files=[ "res://.import/Chivalry_Medieval_Warfare_Background_Siege.jpg-78c49c3be575fbd7aa3d338263b06d22.stex" ]
 
 [params]
 

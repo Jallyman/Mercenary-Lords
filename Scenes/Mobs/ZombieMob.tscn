@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Mobs/ZombieMob.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Mobs/HitBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/avatars/mobs/ZombieMob.png" type="Texture" id=3]
+
+[node name="ZombieMob" type="Sprite"]
+texture = ExtResource( 3 )
+offset = Vector2( 16, 16 )
+script = ExtResource( 1 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]

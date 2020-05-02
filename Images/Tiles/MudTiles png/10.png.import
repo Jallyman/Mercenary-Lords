@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ladder.png-8cb425fd22910860b88c00efe2ace34d.stex"
+path="res://.import/10.png-4c645683a74c37b444e8a7d9fe468c7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Structures/Ladder.png"
-dest_files=[ "res://.import/Ladder.png-8cb425fd22910860b88c00efe2ace34d.stex" ]
+source_file="res://Images/Tiles/MudTiles png/10.png"
+dest_files=[ "res://.import/10.png-4c645683a74c37b444e8a7d9fe468c7e.stex" ]
 
 [params]
 

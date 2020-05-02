@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ladder.png-8cb425fd22910860b88c00efe2ace34d.stex"
+path="res://.import/12.png-619a50d207267f0178b283f2a2b4a17e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Structures/Ladder.png"
-dest_files=[ "res://.import/Ladder.png-8cb425fd22910860b88c00efe2ace34d.stex" ]
+source_file="res://Images/Tiles/GrassTiles png/12.png"
+dest_files=[ "res://.import/12.png-619a50d207267f0178b283f2a2b4a17e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

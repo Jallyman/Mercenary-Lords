@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3142185-medieval-wallpapers.jpg-d426a55474d15a5f66867f50b7a21367.stex"
+path="res://.import/3142185-medieval-wallpapers.jpg-005f1e22479c675f0694c00365f74b65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/menu/3142185-medieval-wallpapers.jpg"
-dest_files=[ "res://.import/3142185-medieval-wallpapers.jpg-d426a55474d15a5f66867f50b7a21367.stex" ]
+source_file="res://Images/Menu/3142185-medieval-wallpapers.jpg"
+dest_files=[ "res://.import/3142185-medieval-wallpapers.jpg-005f1e22479c675f0694c00365f74b65.stex" ]
 
 [params]
 
