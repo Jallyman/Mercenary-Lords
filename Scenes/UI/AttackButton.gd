@@ -5,22 +5,26 @@ extends TextureButton
 # var b = "textvar"
 var mob = null
 
-
 func _on_Attack_button_pressed():
 	
 	var characterGold = get_node("/root/PlayerData").gold
 	var characterStone = get_node("/root/PlayerData").stone
-	var zombieGold = get_node("/root/Node/TileMap/ZombieSpawner/ZombieMob").gold
 	
 	if(mob.visible):
 		
-		characterGold = characterGold + zombieGold
+		characterGold = characterGold + mob.gold
+		characterStone = characterStone + mob.stone
+		get_node("/root/PlayerData").gold = characterGold
+		get_node("/root/PlayerData").stone = characterStone
+		
+		
 		mob.hide()
 		mob.queue_free()
 		self.hide()
-		get_node("/root/PlayerData").gold = characterGold
+		
 		
 		print("gold: ", characterGold)
+		print("Stone: ", characterStone)
 
 		
 		#get_node("AttackButton").queue_free()

@@ -5,7 +5,7 @@ var j = 0
 var spawner = self
 var extents
 var mobPos
-var mobPos2
+var internalPos
 
 func _ready():
 
@@ -25,16 +25,21 @@ func _process(delta):
 	if(i == 200):
 		if(self.has_node("ZombieMob") == false):
 			var mob = load("res://scenes/Mobs/ZombieMob.tscn").instance()
+			var characterPos = get_node("/root/Node/Character").get_position()
 			# mobPos = Vector2(0 + ((floor(rand_range((extents.x*-1)/32,(extents.x)/32))*32)),0 + ((floor(rand_range((extents.x*-1)/32,(extents.x)/32))*32)))
 			var x_coord = round(rand_range(0, extents.x / 32)) * 32
 			var y_coord = round(rand_range(0, extents.y / 32)) * 32
 			
-			mobPos = Vector2(x_coord, y_coord)
+			var internalPos = Vector2(x_coord, y_coord)
+			var mobPos = self.get_position() + Vector2(x_coord, y_coord)
+
+			#print("character", characterPos)
+
 			#print("x co-ords: ", x_coord, "y co-ords: ", y_coord)
-			if(mobPos2 != mobPos):
+			if(mobPos != characterPos):
 				#print("made it 1")
 				mob.set_name("ZombieMob")
-				mob.set_position(mobPos)
+				mob.set_position(internalPos)
 				spawner.add_child(mob)
 				i = 0
 			i-= 1

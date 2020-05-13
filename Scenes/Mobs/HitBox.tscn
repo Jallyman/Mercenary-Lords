@@ -9,6 +9,7 @@ extents = Vector2( 16, 16 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 16, 16 )
+input_pickable = true
 
 [node name="MobButton" type="TextureButton" parent="StaticBody2D"]
 margin_left = -16.0
