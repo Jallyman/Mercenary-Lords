@@ -14,5 +14,3 @@ centered = false
 offset = Vector2( 0, 0 )
 
 [editable path="TileMap"]
-
-[editable path="TileMap/Spawner"]

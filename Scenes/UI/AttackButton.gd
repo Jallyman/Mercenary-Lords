@@ -9,17 +9,20 @@ var mob = null
 func _on_Attack_button_pressed():
 	
 	var characterGold = get_node("/root/PlayerData").gold
-	var mobGold = get_node("/root/Node/TileMap/Spawner/ZombieMob").gold
+	var characterStone = get_node("/root/PlayerData").stone
+	var zombieGold = get_node("/root/Node/TileMap/ZombieSpawner/ZombieMob").gold
 	
 	if(mob.visible):
 		
-		characterGold = characterGold + mobGold
+		characterGold = characterGold + zombieGold
 		mob.hide()
 		mob.queue_free()
 		self.hide()
 		get_node("/root/PlayerData").gold = characterGold
 		
-		print(characterGold)
+		print("gold: ", characterGold)
+
+		
 		#get_node("AttackButton").queue_free()
 		
 func _ready():

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ladder.png-ab567262727c6ef92830ca6c1691b66e.stex"
+path="res://.import/Stone_golem.png-4f73d20c8ac0aba9782c25e2fa7cf673.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Structures/ladder.png"
-dest_files=[ "res://.import/ladder.png-ab567262727c6ef92830ca6c1691b66e.stex" ]
+source_file="res://Images/Avatars/Mobs/Stone_golem.png"
+dest_files=[ "res://.import/Stone_golem.png-4f73d20c8ac0aba9782c25e2fa7cf673.stex" ]
 
 [params]
 

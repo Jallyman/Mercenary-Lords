@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Maps/MainMap.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Objects/Ladder.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Objects/Spawner.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Objects/ZombieSpawner.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Objects/ZombieSpawner.gd" type="Script" id=6]
 
 [node name="TileMap" type="TileMap"]
 tile_set = ExtResource( 1 )
@@ -16,6 +16,6 @@ script = ExtResource( 2 )
 [node name="Ladder" parent="." instance=ExtResource( 3 )]
 position = Vector2( -288, 64 )
 
-[node name="Spawner" parent="." instance=ExtResource( 4 )]
+[node name="ZombieSpawner" parent="." instance=ExtResource( 4 )]
 position = Vector2( 64, 64 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )

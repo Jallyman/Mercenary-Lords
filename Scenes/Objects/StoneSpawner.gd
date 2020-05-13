@@ -9,22 +9,22 @@ var mobPos2
 
 func _ready():
 
-	var spawnerShape = get_node("SpawnerShape")
+	var spawnerShape = get_node("/root/Node/TileMap/StoneSpawner/SpawnerShape")
 	extents = spawnerShape.shape.get_extents()
 	
 	pass
 
 func _process(delta):
 	
-	if(self.has_node("ZombieMob") == false):
+	if(self.has_node("StoneMob") == false):
 		i+= 1
 		
 #	if(self.has_node("Mob2") == false):
 #		j+= 1
 		
 	if(i == 200):
-		if(self.has_node("ZombieMob") == false):
-			var mob = load("res://scenes/Mobs/ZombieMob.tscn").instance()
+		if(self.has_node("StoneMob") == false):
+			var mob = load("res://scenes/Mobs/StoneMob.tscn").instance()
 			# mobPos = Vector2(0 + ((floor(rand_range((extents.x*-1)/32,(extents.x)/32))*32)),0 + ((floor(rand_range((extents.x*-1)/32,(extents.x)/32))*32)))
 			var x_coord = round(rand_range(0, extents.x / 32)) * 32
 			var y_coord = round(rand_range(0, extents.y / 32)) * 32
@@ -33,7 +33,7 @@ func _process(delta):
 			#print("x co-ords: ", x_coord, "y co-ords: ", y_coord)
 			if(mobPos2 != mobPos):
 				#print("made it 1")
-				mob.set_name("ZombieMob")
+				mob.set_name("StoneMob")
 				mob.set_position(mobPos)
 				spawner.add_child(mob)
 				i = 0
