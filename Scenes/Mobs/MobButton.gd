@@ -13,11 +13,14 @@ func _on_Mob_button_pressed():
 	var mobPos = mob.get_position()
 	var charPos = character.get_position()
 	var attackButton = get_node("/root/Node/Character/Camera2D/MenuButton/Menu/AttackButton")
+	var mobStats = get_node("/root/Node/Character/Camera2D/MenuButton/Menu/MobStats")
 	var attackPos = attackButton.get_position()
 	
 	print(mob)
 	attackButton.mob = mob
 	attackButton.show()
+	mobStats.mob = mob
+	mobStats.show()
 	
 func _ready():
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND

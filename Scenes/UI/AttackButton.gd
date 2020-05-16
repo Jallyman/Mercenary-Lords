@@ -16,9 +16,10 @@ func _on_Attack_button_pressed():
 		characterStone = characterStone + mob.stone
 		get_node("/root/PlayerData").gold = characterGold
 		get_node("/root/PlayerData").stone = characterStone
-		
+		get_node("/root/")
 		
 		mob.hide()
+		get_parent().get_node("MobStats").hide()
 		mob.queue_free()
 		self.hide()
 		

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/UI/MobStats.gd" type="Script" id=1]
+
+[node name="Label" type="Label"]
+margin_left = -127.363
+margin_top = 136.712
+margin_right = -87.3634
+margin_bottom = 150.712
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

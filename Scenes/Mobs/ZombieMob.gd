@@ -5,11 +5,18 @@ extends Sprite
 # var a = 2
 # var b = "text"
 var gold = 5
-var stone = 0 
+var stone = 0
+var power = 1
+var minSize = 10
+var maxSize = 25
+var mobSize
+var totalPower
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	
+	mobSize = get_node("Node2D").rng.randi_range(minSize, maxSize)
+	totalPower = power * mobSize
+	print(totalPower)
 	pass # Replace with function body.
 
 
