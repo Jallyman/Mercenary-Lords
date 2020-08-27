@@ -7,26 +7,30 @@ var mob = null
 
 func _on_Attack_button_pressed():
 	
-	var characterGold = get_node("/root/PlayerData").gold
-	var characterStone = get_node("/root/PlayerData").stone
+	var characterStats = get_node("/root/PlayerData")
+	var characterGold = characterStats.gold
+	var characterStone = characterStats.stone
+	var characterPower = characterStats.power
 	
-	if(mob.visible):
-		
+	if(characterPower >= mob.totalPower):
 		characterGold = characterGold + mob.gold
 		characterStone = characterStone + mob.stone
 		get_node("/root/PlayerData").gold = characterGold
 		get_node("/root/PlayerData").stone = characterStone
-		get_node("/root/")
+		#get_node("/root/")
 		
 		mob.hide()
 		get_parent().get_node("MobStats").hide()
 		mob.queue_free()
 		self.hide()
 		
-		
 		print("gold: ", characterGold)
 		print("Stone: ", characterStone)
-
+		
+	else:
+		print("Too weak")
+		get_parent().get_node("MobStats").hide()
+		self.hide()
 		
 		#get_node("AttackButton").queue_free()
 		

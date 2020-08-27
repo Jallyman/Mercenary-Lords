@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 256, 256 )
+
+[node name="SpawnerLarge" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="SpawnerShape" type="CollisionShape2D" parent="."]
+position = Vector2( 256, 256 )
+shape = SubResource( 1 )
+
+[node name="Mobs" type="Node2D" parent="."]

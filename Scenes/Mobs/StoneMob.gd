@@ -16,7 +16,7 @@ var totalPower
 func _ready():
 	mobSize = get_node("Node2D").rng.randi_range(minSize, maxSize)
 	totalPower = power * mobSize
-	print(mobSize)
+	# print(mobSize)
 	pass # Replace with function body.
 
 
