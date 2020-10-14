@@ -21,15 +21,18 @@ position = Vector2( -288, 64 )
 [node name="ZombieSpawner" parent="." instance=ExtResource( 4 )]
 position = Vector2( 64, 64 )
 script = ExtResource( 7 )
-spawnNumber = 9
+spawnNumber = 5
+spawnTimer = 100
 mobName = "res://scenes/Mobs/ZombieMob.tscn"
 
 [node name="StoneSpawner" parent="." instance=ExtResource( 4 )]
 position = Vector2( -192, -192 )
 script = ExtResource( 7 )
 spawnNumber = 3
+spawnTimer = 300
 mobName = "res://scenes/Mobs/StoneMob.tscn"
 
 [node name="SpawnerLarge" parent="." instance=ExtResource( 5 )]
+position = Vector2( -448, -448 )
 script = ExtResource( 7 )
-spawnNumber = 100
+spawnTimer = 1000

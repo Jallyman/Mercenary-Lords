@@ -21,6 +21,7 @@ run/main_scene="res://Scenes/UI/startMenu.tscn"
 [autoload]
 
 PlayerData="*res://Scenes/Player/PlayerData.gd"
+Maps="*res://Scenes/Maps/Maps.gd"
 
 [debug]
 

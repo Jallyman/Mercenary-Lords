@@ -13,10 +13,10 @@ func _on_Attack_button_pressed():
 	var characterPower = characterStats.power
 	
 	if(characterPower >= mob.totalPower):
-		characterGold = characterGold + mob.gold
-		characterStone = characterStone + mob.stone
-		get_node("/root/PlayerData").gold = characterGold
-		get_node("/root/PlayerData").stone = characterStone
+		characterGold = characterGold + mob.totalGold
+		characterStone = characterStone + mob.totalStone
+		PlayerData.gold = characterGold
+		PlayerData.stone = characterStone
 		#get_node("/root/")
 		
 		mob.hide()

@@ -6,17 +6,22 @@ var spawner = self
 var extents
 var mobPos
 var internalPos
+var space_state
 
 var rng = RandomNumberGenerator.new()
 export var spawnNumber = 1
+export var spawnTimer = 200
 export var mobName = "res://scenes/Mobs/wizardMob.tscn"
 
 func _ready():
 	
+	space_state = get_world_2d().direct_space_state
+	
+	
 	rng.randomize()
 	var spawnerShape = get_node("SpawnerShape")
 	extents = spawnerShape.shape.get_extents()
-	print("Extents = ", extents) 
+	# print("Extents = ", extents) 
 	pass
 	
 	
@@ -31,7 +36,7 @@ func check_overlap(internalPos):
 	
 	
 	for i in range(0, number):
-		print(list[i].get_position())
+		#print(list[i].get_position())
 		if(list[i].get_position() != internalPos):
 			i = i + 1
 		else:
@@ -41,7 +46,6 @@ func check_overlap(internalPos):
 	
 	pass
 
-
 func _process(delta):
 	
 	var childrenNumber = $Mobs.get_child_count()
@@ -50,7 +54,8 @@ func _process(delta):
 	if(childrenNumber < spawnNumber):
 		i+= 1
 		
-	if(i == 200):
+		
+	if(i == spawnTimer):
 		if(childrenNumber < spawnNumber):
 			var mob = load(mobName).instance()
 			var characterPos = get_node("/root/Node/Character").get_position()
@@ -61,7 +66,9 @@ func _process(delta):
 			internalPos = Vector2(x_coord, y_coord)
 			mobPos = self.get_position() + Vector2(x_coord, y_coord)
 			
-			if(mobPos != characterPos && check_overlap(internalPos)):
+			var collisions = space_state.intersect_point(mobPos + Vector2(16, 16))
+			
+			if(collisions.empty()):
 				mob.set_position(internalPos)
 				$Mobs.add_child(mob)
 				i = 0

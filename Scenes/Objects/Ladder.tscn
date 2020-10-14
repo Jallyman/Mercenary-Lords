@@ -3,6 +3,8 @@
 [ext_resource path="res://Scenes/Objects/LadderButtonDown.gd" type="Script" id=1]
 [ext_resource path="res://images/structures/ladder.png" type="Texture" id=2]
 
+
+
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Ladder" type="Sprite"]
