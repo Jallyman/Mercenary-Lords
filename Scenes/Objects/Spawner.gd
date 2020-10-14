@@ -48,8 +48,8 @@ func check_overlap(internalPos):
 
 func _process(delta):
 	
+	
 	var childrenNumber = $Mobs.get_child_count()
-	#print(childrenNumber)
 	
 	if(childrenNumber < spawnNumber):
 		i+= 1

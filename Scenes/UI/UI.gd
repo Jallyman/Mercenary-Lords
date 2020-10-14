@@ -5,7 +5,9 @@ extends Node
 # var b = "textvar"
 
 func _ready():
-	#Maps.underground = load("res://Scenes/Maps/Underground2.tscn").instance()
+	Maps.mainMap = get_child(0)
+	Maps.underground = load("res://Scenes/Maps/Underground.tscn").instance()
+	
 	pass
 
 #func _process(delta):

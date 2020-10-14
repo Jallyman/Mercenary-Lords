@@ -14,16 +14,15 @@ func _on_Ladder_button_up_pressed():
 	
 	if((ladPos.x - charPos.x) < 160 && (ladPos.x - charPos.x > -160)):
 		if((ladPos.y - charPos.y) < 160 && (ladPos.y - charPos.y > -160)):
-			print(charPos.y)
+
 			nextMap = Maps.mainMap
-			ladPos.y = ladPos.y + 32
 			
+			ladPos.y = ladPos.y + 32
 			character.set_position(ladPos)
-			#UI.hide(tileMap)
+			
 			UI.remove_child(tileMap)
 			UI.add_child(nextMap)
 			UI.move_child(nextMap,0)
-			#tileMap.queue_free()
 
 func _ready():
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
@@ -33,3 +32,11 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+#			character.set_position(ladPos)
+#			#UI.hide(tileMap)
+#			UI.remove_child(tileMap)
+#			UI.add_child(nextMap)
+#			UI.move_child(nextMap,0)
+#			#tileMap.queue_free()

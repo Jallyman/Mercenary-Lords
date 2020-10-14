@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://images/tilesets/grassTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Objects/LadderUp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Objects/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Objects/Spawner.gd" type="Script" id=4]
 
 [node name="TileMap" type="TileMap"]
 tile_set = ExtResource( 1 )
@@ -12,3 +14,8 @@ tile_data = PoolIntArray( -3080240, 35, 0, -3080239, 35, 0, -3080238, 35, 0, -30
 
 [node name="LadderUp" parent="." instance=ExtResource( 2 )]
 position = Vector2( -288, 64 )
+
+[node name="Spawner" parent="." instance=ExtResource( 3 )]
+position = Vector2( -128, 0 )
+script = ExtResource( 4 )
+mobName = "res://scenes/Mobs/zombieMob.tscn"
