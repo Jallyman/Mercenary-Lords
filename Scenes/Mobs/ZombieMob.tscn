@@ -4,7 +4,9 @@
 [ext_resource path="res://Scenes/Mobs/HitBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Images/avatars/mobs/ZombieMob.png" type="Texture" id=3]
 
-[node name="ZombieMob" type="Sprite"]
+[node name="ZombieMob" type="Sprite" groups=[
+"Save",
+]]
 texture = ExtResource( 3 )
 offset = Vector2( 16, 16 )
 script = ExtResource( 1 )

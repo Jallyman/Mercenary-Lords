@@ -68,6 +68,9 @@ func _process(delta):
 			
 			var collisions = space_state.intersect_point(mobPos + Vector2(16, 16))
 			
+#			if(!collisions.empty()):
+#				print(collisions[0])
+			
 			if(collisions.empty()):
 				mob.set_position(internalPos)
 				$Mobs.add_child(mob)
@@ -75,4 +78,7 @@ func _process(delta):
 			i-= 1
 		
 	pass
+
+#func save(save_game : Resource):
+	#save_game.data[SAVE_KEY] = 
 

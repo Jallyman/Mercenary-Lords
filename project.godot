@@ -22,6 +22,7 @@ run/main_scene="res://Scenes/UI/startMenu.tscn"
 
 PlayerData="*res://Scenes/Player/PlayerData.gd"
 Maps="*res://Scenes/Maps/Maps.gd"
+WeaponsTroops="*res://Scenes/Player/WeaponsTroops.gd"
 
 [debug]
 

@@ -10,7 +10,8 @@ func _on_Attack_button_pressed():
 	var characterStats = get_node("/root/PlayerData")
 	var characterGold = characterStats.gold
 	var characterStone = characterStats.stone
-	var characterPower = characterStats.power
+	var characterPower = characterStats.get_power()
+	print(characterPower)
 	
 	if(characterPower >= mob.totalPower):
 		characterGold = characterGold + mob.totalGold

@@ -22,4 +22,11 @@ func _on_Quit_game_pressed():
 	get_tree().quit()
 
 
+func _on_Load_pressed():
+	get_tree().change_scene("res://scenes/UI/UI.tscn")
+	PlayerData.loadGame = 1
+	
+	pass # Replace with function body.
+
+
 

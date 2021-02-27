@@ -28,9 +28,9 @@ func _physics_process(delta):
 	else:
 		motion.x = 0
 		motion.y = 0
-	
-	if(motion.length() != 0 && space_state.intersect_ray(position , position + motion, [self]).empty()):
-		# print(space_state.intersect_ray(position, position + motion, [self]))
-		# print(position)
+		
+	# Checks collision against space state and excludes its own StaticBody2D
+	if(motion.length() != 0 && space_state.intersect_ray(position, position + motion, [get_child(0)]).empty()):
+
 		translate(motion)
 	pass
